@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Quên mật khẩu";
+    ViewBag.Buoc = 1;
+    ViewBag.TongBuoc = 4;
+    ViewBag.TenBuoc = "Nhập email";
+}
+
+<div class="auth-step">
+    <div class="auth-step__icon" aria-hidden="true">
+        <i class="bi bi-key"></i>
+    </div>
+
+    <h1 class="auth-step__title h3 fw-bold mb-2">Quên mật khẩu?</h1>
+
+    <p class="auth-step__description mb-4">
+        Nhập email tài khoản. Chúng tôi sẽ gửi mã OTP để xác minh.
+    </p>
+
+    @Html.Partial("_Alert")
+
+    <form method="post" action="@Url.Action("Email", "ForgotPassword")">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="portal" value="@ViewBag.Portal">
+
+        <div class="mb-4">
+            <label for="email" class="form-label">Email</label>
+
+            <div class="input-group auth-input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                </span>
+                <input id="email"
+                       name="email"
+                       type="email"
+                       class="form-control"
+                       value="@ViewBag.Email"
+                       placeholder="Nhập email tài khoản"
+                       autocomplete="email"
+                       required
+                       autofocus>
+            </div>
+        </div>
+
+        <button type="submit" class="btn auth-submit btn-lg w-100">
+            Gửi mã OTP
+            <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+        </button>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+﻿@{
+    string flow = ViewBag.Flow as string ?? "register";
+    bool laDatLaiMatKhau = flow == "reset";
+
+    ViewBag.Title = "Xác minh email";
+    ViewBag.Flow = flow;
+    ViewBag.Buoc = 2;
+    ViewBag.TongBuoc = laDatLaiMatKhau ? 4 : 3;
+    ViewBag.TenBuoc = "Xác minh email";
+}
+
+@Html.Partial("~/Areas/Auth/Views/Shared/_OtpForm.cshtml")
+
+@section scripts {
+    <script src="@Url.Content("~/Scripts/auth/otp.js")"></script>
+}

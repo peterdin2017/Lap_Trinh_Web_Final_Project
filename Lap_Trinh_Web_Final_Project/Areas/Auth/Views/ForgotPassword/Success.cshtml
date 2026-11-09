@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Đặt lại mật khẩu thành công";
+    ViewBag.Buoc = 4;
+    ViewBag.TongBuoc = 4;
+    ViewBag.TenBuoc = "Hoàn tất";
+}
+
+<div class="auth-step text-center">
+    <div class="auth-step__icon auth-step__icon--round" aria-hidden="true">
+        <i class="bi bi-check-lg"></i>
+    </div>
+
+    <h1 class="auth-step__title h3 fw-bold mb-2">Đặt lại mật khẩu thành công</h1>
+
+    <p class="auth-step__description mb-4">Bạn có thể đăng nhập bằng mật khẩu mới.</p>
+
+    <a href="@ViewBag.LoginUrl" class="btn auth-submit btn-lg w-100">
+        Quay về đăng nhập
+        <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+    </a>
+</div>

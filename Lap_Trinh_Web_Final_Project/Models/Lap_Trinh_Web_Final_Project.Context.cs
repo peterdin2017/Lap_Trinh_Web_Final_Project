@@ -13,10 +13,10 @@ namespace Lap_Trinh_Web_Final_Project.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ltw_final_projectEntities : DbContext
+    public partial class Lap_Trinh_Web_Final_Project_Entities : DbContext
     {
-        public ltw_final_projectEntities()
-            : base("name=ltw_final_projectEntities")
+        public Lap_Trinh_Web_Final_Project_Entities()
+            : base("name=Lap_Trinh_Web_Final_Project_Entities")
         {
         }
     

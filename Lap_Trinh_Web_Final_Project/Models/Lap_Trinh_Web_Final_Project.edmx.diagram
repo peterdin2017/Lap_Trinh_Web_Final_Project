@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="24cc0d20b4d94753ad89d3ce0b9ec83c" Name="Diagram1">
+      <Diagram DiagramId="f0bc94b2aad94a6b8bf767d99ece0bff" Name="Diagram1">
         <EntityTypeShape EntityType="ltw_final_projectModel.Account" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ltw_final_projectModel.Otp" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ltw_final_projectModel.User" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <AssociationConnector Association="ltw_final_projectModel.FK_otps_accounts" ManuallyRouted="false" />
-        <AssociationConnector Association="ltw_final_projectModel.FK_users_accounts" ManuallyRouted="false" />
+        <AssociationConnector Association="ltw_final_projectModel.FK_Otps_Accounts" ManuallyRouted="false" />
+        <AssociationConnector Association="ltw_final_projectModel.FK_Users_Accounts" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

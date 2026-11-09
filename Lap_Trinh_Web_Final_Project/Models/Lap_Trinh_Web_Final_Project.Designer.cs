@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Tai_Lieu_Hoc_Tap\Nam_03_2026_2027\HK_I_2026-2027\Lap_Trinh_Web\Lap_Trinh_Web_Final_Project\Lap_Trinh_Web_Final_Project\Models\ltw_final_project.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\Tai_Lieu_Hoc_Tap\Nam_03_2026_2027\HK_I_2026-2027\Lap_Trinh_Web\Lap_Trinh_Web_Final_Project\Lap_Trinh_Web_Final_Project\Models\Lap_Trinh_Web_Final_Project.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

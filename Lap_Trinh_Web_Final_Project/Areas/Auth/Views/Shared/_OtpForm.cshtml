@@ -1,0 +1,87 @@
+﻿@{
+    string flow = ViewBag.Flow as string ?? "register";
+    bool laDatLaiMatKhau = flow == "reset";
+}
+
+<div class="auth-step">
+    <div class="text-center mb-4">
+        <div class="auth-otp__icon mb-3" aria-hidden="true">
+            <i class="bi bi-envelope-check fs-1"></i>
+        </div>
+
+        <h1 class="auth-step__title h3 fw-bold mb-2">Xác minh email</h1>
+
+        <p class="auth-step__description mb-0">
+            @if (laDatLaiMatKhau)
+            {
+                <text>Nhập mã xác nhận gồm 6 chữ số để tiếp tục đặt lại mật khẩu.</text>
+            }
+            else
+            {
+                <text>Nhập mã xác nhận gồm 6 chữ số chúng tôi đã gửi cho bạn.</text>
+            }
+        </p>
+    </div>
+
+    <div class="auth-otp__notice d-flex align-items-center gap-3 mb-4 p-3" role="status">
+        <i class="auth-otp__notice-icon bi bi-envelope fs-4" aria-hidden="true"></i>
+        <div class="small">
+            Mã OTP được gửi đến
+            <strong class="d-block text-break">@ViewBag.Email</strong>
+        </div>
+    </div>
+
+    @Html.Partial("~/Views/Shared/_Alert.cshtml")
+
+    <form method="post"
+          action="@Url.Action("Verify", "Otp", new { area = "Auth" })"
+          id="otpForm">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="flow" value="@flow">
+        <input type="hidden" name="otpCode" id="otpValue">
+
+        <label for="otpInput0" class="form-label fw-semibold">Mã OTP</label>
+
+        <div class="auth-otp__inputs mb-4" id="otpInputs">
+            @for (int i = 0; i < 6; i++)
+            {
+                string tuDong = i == 0 ? "one-time-code" : "off";
+                <input id="otpInput@(i)"
+                       type="text"
+                       class="form-control auth-otp__input text-center fs-3"
+                       inputmode="numeric"
+                       maxlength="1"
+                       pattern="[0-9]"
+                       aria-label="Số OTP thứ @(i + 1)"
+                       autocomplete="@tuDong"
+                       required />
+            }
+        </div>
+
+        <button type="submit" class="btn auth-submit btn-lg w-100">
+            Xác minh
+        </button>
+    </form>
+
+    <form method="post"
+          action="@Url.Action("Resend", "Otp", new { area = "Auth" })"
+          class="text-center mt-3">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="flow" value="@flow">
+
+        <button type="submit" class="btn btn-link auth-otp__resend text-decoration-none">
+            Gửi lại mã OTP
+        </button>
+    </form>
+
+    @if (!laDatLaiMatKhau)
+    {
+        <div class="text-center border-top mt-3 pt-3">
+            <a href="@Url.Action("Index", "Register", new { area = "Store" })"
+               class="auth-otp__back text-decoration-none small">
+                <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>
+                Quay lại nhập email
+            </a>
+        </div>
+    }
+</div>

@@ -14,15 +14,15 @@ namespace Lap_Trinh_Web_Final_Project.Models
     
     public partial class User
     {
-        public long user_id { get; set; }
-        public long account_id { get; set; }
-        public string full_name { get; set; }
-        public string phone { get; set; }
-        public string address { get; set; }
-        public Nullable<System.DateTime> birth_date { get; set; }
-        public string gender { get; set; }
-        public System.DateTime created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public long UserId { get; set; }
+        public long AccountId { get; set; }
+        public string FullName { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
+        public Nullable<System.DateTime> BirthDate { get; set; }
+        public string Gender { get; set; }
+        public System.DateTime CreatedAt { get; set; }
+        public Nullable<System.DateTime> UpdatedAt { get; set; }
     
         public virtual Account Account { get; set; }
     }

@@ -14,17 +14,17 @@ namespace Lap_Trinh_Web_Final_Project.Models
     
     public partial class Otp
     {
-        public long otp_id { get; set; }
-        public long account_id { get; set; }
-        public string account_type { get; set; }
-        public string email { get; set; }
-        public string otp_hash { get; set; }
-        public int attempts { get; set; }
-        public string purpose { get; set; }
-        public System.DateTime expires_at { get; set; }
-        public Nullable<System.DateTime> used_at { get; set; }
-        public System.DateTime created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public long OtpId { get; set; }
+        public long AccountId { get; set; }
+        public string AccountType { get; set; }
+        public string Email { get; set; }
+        public string OtpHash { get; set; }
+        public int Attempts { get; set; }
+        public string Purpose { get; set; }
+        public System.DateTime ExpiresAt { get; set; }
+        public Nullable<System.DateTime> UsedAt { get; set; }
+        public System.DateTime CreatedAt { get; set; }
+        public Nullable<System.DateTime> UpdatedAt { get; set; }
     
         public virtual Account Account { get; set; }
     }

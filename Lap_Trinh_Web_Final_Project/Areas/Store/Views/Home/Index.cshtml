@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+}
+
+@section styles {
+    <link rel="stylesheet" href="@Url.Content("~/Content/store/home.css")" />
+}
+
+<section class="store-home">
+    <div class="store-home__hero">
+        <div class="store-home__hero-copy">
+            <span class="store-home__eyebrow">CHÀO MỪNG BẠN ĐẾN VỚI CỬA HÀNG</span>
+            <h1>Mua sắm dễ dàng,<br /><span>chọn điều bạn thích.</span></h1>
+            <p>Khám phá không gian mua sắm trực tuyến với nhiều danh mục sản phẩm dành cho bạn.</p>
+            <div class="store-home__hero-actions">
+                <a class="store-home__button store-home__button--primary" href="#store-categories">Khám phá danh mục</a>
+                <a class="store-home__button store-home__button--light" href="@Url.Action("Index", "Register", new { area = "Store" })">Tạo tài khoản</a>
+            </div>
+        </div>
+        <div class="store-home__hero-art" aria-hidden="true">
+            <div class="store-home__art-circle store-home__art-circle--back"></div>
+            <div class="store-home__shopping-bag">
+                <span class="store-home__bag-handle"></span>
+                <span class="store-home__bag-mark">S</span>
+            </div>
+            <span class="store-home__art-spark store-home__art-spark--one">✦</span>
+            <span class="store-home__art-spark store-home__art-spark--two">✧</span>
+            <span class="store-home__art-pill">Chọn món yêu thích</span>
+        </div>
+    </div>
+
+    <section class="store-home__benefits" aria-label="Lợi ích mua sắm">
+        <article class="store-home__benefit">
+            <span class="store-home__benefit-icon" aria-hidden="true">01</span>
+            <div><h2>Mua sắm thuận tiện</h2><p>Tìm sản phẩm theo danh mục và nhu cầu.</p></div>
+        </article>
+        <article class="store-home__benefit">
+            <span class="store-home__benefit-icon" aria-hidden="true">02</span>
+            <div><h2>Thông tin rõ ràng</h2><p>Xem chi tiết trước khi lựa chọn.</p></div>
+        </article>
+        <article class="store-home__benefit">
+            <span class="store-home__benefit-icon" aria-hidden="true">03</span>
+            <div><h2>Hỗ trợ khách hàng</h2><p>Chúng tôi sẵn sàng hỗ trợ bạn.</p></div>
+        </article>
+    </section>
+
+    <section class="store-home__categories" id="store-categories">
+        <div class="store-home__section-heading">
+            <div>
+                <span class="store-home__eyebrow store-home__eyebrow--blue">BẮT ĐẦU KHÁM PHÁ</span>
+                <h2>Mua sắm theo danh mục</h2>
+            </div>
+            <span class="store-home__section-caption">Chọn một danh mục để xem các sản phẩm phù hợp.</span>
+        </div>
+
+        <div class="store-home__category-grid">
+            <a class="store-home__category-card store-home__category-card--blue" href="#store-products">
+                <span class="store-home__category-symbol" aria-hidden="true">01</span>
+                <span class="store-home__category-name">Thời trang</span>
+                <span class="store-home__category-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="store-home__category-card store-home__category-card--mint" href="#store-products">
+                <span class="store-home__category-symbol" aria-hidden="true">02</span>
+                <span class="store-home__category-name">Điện tử</span>
+                <span class="store-home__category-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="store-home__category-card store-home__category-card--peach" href="#store-products">
+                <span class="store-home__category-symbol" aria-hidden="true">03</span>
+                <span class="store-home__category-name">Nhà cửa & đời sống</span>
+                <span class="store-home__category-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="store-home__category-card store-home__category-card--lavender" href="#store-products">
+                <span class="store-home__category-symbol" aria-hidden="true">04</span>
+                <span class="store-home__category-name">Làm đẹp</span>
+                <span class="store-home__category-arrow" aria-hidden="true">→</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="store-home__products" id="store-products">
+        <div class="store-home__section-heading">
+            <div>
+                <span class="store-home__eyebrow store-home__eyebrow--blue">DÀNH CHO BẠN</span>
+                <h2>Sản phẩm nổi bật</h2>
+            </div>
+        </div>
+        <div class="store-home__empty-products">
+            <span class="store-home__empty-icon" aria-hidden="true">✧</span>
+            <h3>Khu vực sản phẩm</h3>
+            <p>Phần này sẽ hiển thị sản phẩm khi module danh mục và sản phẩm được kết nối.</p>
+        </div>
+    </section>
+</section>

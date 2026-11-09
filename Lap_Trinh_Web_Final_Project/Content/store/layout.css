@@ -1,0 +1,44 @@
+﻿:root {
+    --store-bg: #f4f7fb;
+    --store-surface: #fff;
+    --store-text: #172b43;
+    --store-muted: #66788a;
+    --store-border: #dce5ef;
+    --store-blue: #087df1;
+    --store-blue-dark: #0869c9;
+    --store-navy: #12304b;
+}
+
+html {
+    min-height: 100%;
+}
+
+body.store-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: var(--store-text);
+    background: var(--store-bg);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.store-main {
+    flex: 1 0 auto;
+    min-height: 55vh;
+    padding: 28px 0 48px;
+}
+
+.store-main__container {
+    min-height: inherit;
+}
+
+.store-page a {
+    transition: color .18s ease, background-color .18s ease, border-color .18s ease;
+}
+
+@media (max-width: 575.98px) {
+    .store-main {
+        padding: 20px 0 32px;
+    }
+}

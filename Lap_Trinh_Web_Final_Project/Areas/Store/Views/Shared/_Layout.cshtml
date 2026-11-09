@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#087df1" />
+    <title>@(ViewBag.Title == null ? "Website Bán hàng Online" : ViewBag.Title + " | Website Bán hàng Online")</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/store/layout.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/store/header.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/store/footer.css")" />
+    @RenderSection("styles", required: false)
+</head>
+<body class="store-page">
+    @Html.Partial("~/Areas/Store/Views/Shared/_StoreHeader.cshtml")
+
+    <main class="store-main" id="main-content">
+        <div class="container store-main__container">
+            @RenderBody()
+        </div>
+    </main>
+
+    @Html.Partial("~/Areas/Store/Views/Shared/_StoreFooter.cshtml")
+
+    <script src="@Url.Content("~/Scripts/jquery-3.7.0.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.bundle.min.js")"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

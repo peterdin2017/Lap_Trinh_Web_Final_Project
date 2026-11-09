@@ -1,0 +1,21 @@
+﻿@{
+    List<string> danhSachLoi = ViewBag.Loi as List<string>;
+    string thanhCong = TempData["ThanhCong"] as string;
+}
+
+@if (!string.IsNullOrEmpty(thanhCong))
+{
+    <div class="alert alert-success" role="status">@thanhCong</div>
+}
+
+@if (danhSachLoi != null && danhSachLoi.Count > 0)
+{
+    <div class="alert alert-danger" role="alert">
+        <ul class="mb-0 ps-3">
+            @foreach (string loi in danhSachLoi)
+            {
+                <li>@loi</li>
+            }
+        </ul>
+    </div>
+}

@@ -21,14 +21,14 @@ namespace Lap_Trinh_Web_Final_Project.Models
             this.Users = new HashSet<User>();
         }
     
-        public long account_id { get; set; }
-        public string email { get; set; }
-        public string password_hash { get; set; }
-        public string role { get; set; }
-        public string status { get; set; }
-        public bool is_verified { get; set; }
-        public System.DateTime created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public long AccountId { get; set; }
+        public string Email { get; set; }
+        public string PasswordHash { get; set; }
+        public string Role { get; set; }
+        public string Status { get; set; }
+        public bool IsVerified { get; set; }
+        public System.DateTime CreatedAt { get; set; }
+        public Nullable<System.DateTime> UpdatedAt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Otp> Otps { get; set; }
